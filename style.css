@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+
+:root {
+  --body-bg-color: #bfc3ce;
+  --bg-dark-color: #2d3245;
+  --blue-color: #3d37fd;
+  --bg-faint-color: #f4f5f8;
+}
+
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--body-bg-color);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.faint-text {
+  color: #707072;
+  font-weight: 600;
+}
+
+.wrapperContainer {
+  background-color: #fff;
+  max-width: 960px;
+  display: grid;
+  padding: 1.45rem;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 0.6rem;
+}
+
+.wrapperContainer .leftBx {
+  background-color: var(--bg-faint-color);
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+}
+
+.wrapperContainer .leftBx .contentBx {
+  margin: 4rem 0;
+}
+
+.wrapperContainer .leftBx .contentBx h3 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.testimonialContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonialContainer .cards {
+  width: 300%;
+  /* max-width: 300%; */
+  display: flex;
+}
+
+.testimonialContainer .cards .card {
+  position: relative;
+  background-color: var(--bg-dark-color);
+  padding: 1rem;
+}
+
+.testimonialContainer .cards .card .textBx {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.testimonialContainer .cards .card .textBx p {
+  line-height: 1.6;
+}
+
+.testimonialContainer .cards .card .userBx {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+
+.testimonialContainer .cards .card .userBx .imgBx {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.testimonialContainer .cards .card .userBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonialContainer .cards .card .userBx .userDetails h3 {
+  font-size: 14px;
+  color: #fff;
+}
+
+.testimonialContainer .cards .card .userBx .userDetails p {
+  font-size: 14px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 0.3rem;
+}
+
+.indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.indicators button.active {
+  background-color: cyan;
+}
+
+input {
+  height: 38px;
+  padding: 0 0.8rem;
+  outline: none;
+  border: 2px solid #161616;
+  border-radius: 4px;
+}
+
+.btn {
+  width: 100%;
+  background: var(--blue-color);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1rem 0;
+  border-radius: 0.3rem;
+  color: #fff;
+}
+
+.wrapperContainer .rightBx {
+  padding: 1.5rem;
+}
+
+.wrapperContainer .rightBx .formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.wrapperContainer .rightBx .formContainer div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapperContainer .rightBx .formContainer span {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .wrapperContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapperContainer .leftBx {
+    padding: 0;
+  }
+  .wrapperContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+}

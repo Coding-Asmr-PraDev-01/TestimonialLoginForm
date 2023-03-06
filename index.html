@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapperContainer">
+        <div class="leftBx">
+          <div class="contentBx">
+            <h3 class="heading">
+              Let us help you run your freelance business.
+            </h3>
+            <p class="desc faint-text">
+              Our registration process is quick and easy, taking no more than 10
+              minutes to complete.
+            </p>
+          </div>
+
+          <div class="testimonialContainer">
+            <div class="cards">
+              <div class="card">
+                <div class="textBx">
+                  <p>
+                    I'm impressed with the results I've seen since starting to
+                    use this product, I begin receiving clients.
+                  </p>
+                </div>
+                <div class="userBx">
+                  <div class="imgBx">
+                    <img src="./assets/PeoplesPng-1.jpg" alt="" />
+                  </div>
+                  <div class="userDetails">
+                    <h3>Jonas Pink</h3>
+                    <p class="faint-text">Product Designer</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="textBx">
+                  <p>
+                    It is so helpful to have a thoroughly designed put together
+                    for a step by step learning journey.
+                  </p>
+                </div>
+                <div class="userBx">
+                  <div class="imgBx">
+                    <img src="./assets/PeoplesPng-2.jpg" alt="" />
+                  </div>
+                  <div class="userDetails">
+                    <h3>Sam Harris</h3>
+                    <p class="faint-text">Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="textBx">
+                  <p>
+                    The courses are hands-on and allow you to practice as you
+                    learn so the concepts stick better.
+                  </p>
+                </div>
+                <div class="userBx">
+                  <div class="imgBx">
+                    <img src="./assets/PeoplesPng-3.jpg" alt="" />
+                  </div>
+                  <div class="userDetails">
+                    <h3>Saphhire james</h3>
+                    <p class="faint-text">Graphics Artist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="indicators">
+              <button class="active"></button>
+              <button></button>
+              <button></button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="rightBx">
+          <div class="contentBx">
+            <h2>Get Started</h2>
+            <p class="faint-text">Create your account now.</p>
+          </div>
+
+          <div class="formContainer">
+            <div>
+              <label class="faint-text" for="">Full name</label>
+              <input type="text" placeholder="Enter Full Name" />
+            </div>
+
+            <div>
+              <label class="faint-text" for="">Email</label>
+              <input type="text" placeholder="Enter Email" />
+            </div>
+
+            <div>
+              <label class="faint-text" for="">Password</label>
+              <input type="password" placeholder="Enter Full Name" />
+            </div>
+            <div>
+              <a href="#" class="btn">Sign Up</a>
+            </div>
+            <span>Have an account? <a href="#">Login</a></span>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <script>
+      const cards = document.querySelector(".cards");
+      const indicators = document.querySelectorAll(".indicators button");
+
+      const indicatorArr = [...indicators];
+
+      let count = 0;
+      indicatorArr.forEach((btn, ind) => {
+        btn.addEventListener("click", () => {
+          indicatorArr[count].classList.remove("active");
+          cards.style.marginLeft = `-${100 * ind}%`;
+          btn.classList.add("active");
+          count = ind;
+        });
+      });
+    </script>
+  </body>
+</html>
